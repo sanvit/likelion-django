@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+    <title>Blog</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>New Post</h1>
+
+    <div class="w-device h-device">
+        <div class="container mx-auto">
+            <form action="{% url 'postcreate' %}" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="title" class="block text-sm font-medium leading-5 text-gray-700">제목</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <input name="title" id="title" class="form-input block w-full sm:text-sm sm:leading-5"
+                            placeholder="제목" />
+                    </div>
+                </div>
+                <div>
+                    <label for="content">내용</label><br>
+                    <textarea name="body" id="body" cols="30" rows="20"></textarea>
+                </div>
+                <input type="submit" value="글쓰기">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
