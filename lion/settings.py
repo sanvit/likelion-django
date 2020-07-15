@@ -25,7 +25,7 @@ SECRET_KEY = 'j-h+yn&n7q^5wo6p%6nx3(vdfutxfcwew5+5v&_une&h=$=5g2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lion-django.sanvit.me','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['lion-django.sanvit.me','lion.akamai.sanvit.me','127.0.0.1','localhost']
 
 
 # Application definition
